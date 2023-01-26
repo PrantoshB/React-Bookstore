@@ -5,9 +5,10 @@ import { addBook } from '../redux/books/books';
 
 const createBook = (title, author) => (
   {
-    id: uuidv4(),
+    item_id: uuidv4(),
     title,
     author,
+    category: 'Adventure',
   }
 );
 
