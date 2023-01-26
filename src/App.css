@@ -21,7 +21,7 @@ body {
 }
 
 .navigation h1 {
-  color: rgb(0, 123, 212);
+  color: #0290ff;
 }
 
 .navigation ul {
@@ -38,7 +38,7 @@ body {
 }
 
 .navigation ul li a:hover {
-  color: rgb(0, 114, 196);
+  color: #0290ff;
 }
 
 .booksContainer {
@@ -76,7 +76,7 @@ h2 {
 }
 
 #author {
-  color: rgb(0, 123, 212);
+  color: #0290ff;
   font-size: 0.8rem;
 }
 
@@ -93,7 +93,7 @@ button {
 .buttonsContainer button {
   background: transparent;
   border: none;
-  color: rgb(0, 123, 212);
+  color: #0290ff;
   font-family: 'Roboto Slab', serif;
   padding-left: 0;
   padding-right: 1rem;
@@ -139,7 +139,7 @@ form {
 
 #update {
   color: rgb(239, 239, 239);
-  background: rgb(0, 123, 212);
+  background: #0290ff;
   border: none;
   margin-top: 4%;
   padding: 4% 3%;
@@ -158,14 +158,14 @@ form {
 
 #user-icon {
   font-size: 3rem;
-  color: rgb(80, 156, 222);
+  color: #0290ff;
   margin-left: auto;
 }
 
 .add-book {
   width: 25%;
   color: rgb(239, 239, 239);
-  background: rgb(0, 123, 212);
+  background: #0290ff;
   border: none;
   padding: 1.1%;
   border-radius: 3px;
@@ -189,7 +189,7 @@ form {
 .categories-page button {
   width: 20%;
   color: rgb(239, 239, 239);
-  background: rgb(0, 123, 212);
+  background: #0290ff;
   border: none;
   padding: 1%;
   border-radius: 3px;
