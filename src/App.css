@@ -1,3 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
 * {
-  font-family: sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background: rgb(213, 222, 224);
+}
+
+button {
+  cursor: pointer;
+}
+
+.main {
+  background: rgb(255, 255, 255);
+  margin: 5% 10%;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  padding: 1% 4%;
+  border-bottom: 2px solid rgb(241, 241, 241);
+}
+
+.navigation h1 {
+  color: rgb(0, 123, 212);
+}
+
+.navigation ul {
+  display: flex;
+  list-style: none;
+  text-transform: uppercase;
+  gap: 2rem;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  font-weight: 400;
+  color: rgb(120, 120, 120);
+}
+
+.navigation ul li a:hover {
+  color: rgb(0, 114, 196);
+}
+
+.booksContainer {
+  padding: 1% 4%;
+  background: rgb(245, 246, 250);
+}
+
+.bookContainer {
+  margin: 2% 0;
+  padding: 2% 3%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  border: 2px solid rgb(215, 215, 215);
+}
+
+p,
+h2 {
+  margin: 0;
+}
+
+#category {
+  font-weight: 700;
+  color: rgb(119, 119, 119);
+}
+
+#title,
+#author,
+#chapthead,
+#chaptname,
+#update {
+  font-family: 'Roboto Slab', serif;
+}
+
+#author {
+  color: rgb(0, 123, 212);
+  font-size: 0.8rem;
+}
+
+.buttonsContainer button {
+  background: transparent;
+  border: none;
+  color: rgb(0, 123, 212);
+  font-family: 'Roboto Slab', serif;
+  padding-left: 0;
+  padding-right: 1rem;
+  margin: 5% 0;
+}
+
+.progressBar {
+  display: flex;
+  gap: 1rem;
+  border-right: 1px solid rgb(200, 198, 198);
+  padding-right: 3rem;
+}
+
+.percent h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+input {
+  padding: 1%;
+  width: 25%;
+  border: 1px solid rgb(199, 199, 199);
+  color: black;
+}
+
+select {
+  padding: 1%;
+  width: 25%;
+  border: 1px solid rgb(199, 199, 199);
+}
+
+form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 4%;
+}
+
+#chapthead {
+  font-size: 0.8rem;
+  color: rgb(173, 173, 173);
+  font-weight: 500;
+}
+
+#update {
+  color: rgb(239, 239, 239);
+  background: rgb(0, 123, 212);
+  border: none;
+  margin-top: 4%;
+  padding: 4% 3%;
+  width: 12rem;
+  border-radius: 2px;
+}
+
+.currentChapt {
+  margin-left: 10%;
+}
+
+.prog-chapt {
+  display: flex;
+  margin-right: 5%;
+}
+
+#user-icon {
+  font-size: 3rem;
+  color: rgb(80, 156, 222);
+  margin-left: auto;
+}
+
+.add-book {
+  width: 25%;
+  color: rgb(239, 239, 239);
+  background: rgb(0, 123, 212);
+  border: none;
+}
+
+#add-title {
+  color: rgb(126, 126, 126);
 }
