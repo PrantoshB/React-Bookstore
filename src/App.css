@@ -84,6 +84,12 @@ button {
   cursor: pointer;
 }
 
+.categories-page h4,
+button {
+  margin: auto;
+  text-align: center;
+}
+
 .buttonsContainer button {
   background: transparent;
   border: none;
@@ -174,12 +180,6 @@ form {
   flex-direction: column;
   justify-content: center;
   height: 50vh;
-}
-
-.categories-page h4,
-button {
-  margin: auto;
-  text-align: center;
 }
 
 .categories-page h4 {
