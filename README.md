@@ -26,10 +26,7 @@
 
 # 📖 React Bookstore <a name="about-project"></a>
 
-
 <b>React Bookstore</b> is a CMS website where users can organize books, and update reading progress.
-
-
 
 ## 🛠 Built With <a name="built-with"></a>
 
