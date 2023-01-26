@@ -1,44 +1,66 @@
-import { v4 as uuidv4 } from 'uuid';
+import { createAsyncThunk } from '@reduxjs/toolkit';
 
 const ADD = 'ADD';
 const REMOVE = 'REMOVE';
-const initialState = [
-  {
-    id: uuidv4(),
-    title: 'One Hundred Years of Solitude',
-    author: 'Gabriel Garcia Marquez',
-  },
-  {
-    id: uuidv4(),
-    title: 'A Passage to India',
-    author: 'E.M. Forster',
-  },
-];
+const GET_BOOKS = 'GET_BOOKS';
+const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/CgMjn0O45ITkQbdSriqK/books';
 
-const addBook = (book) => ({
-  type: ADD,
-  payload: {
-    id: uuidv4(),
-    title: book.title,
-    author: book.author,
+const getAllBooks = createAsyncThunk(
+  GET_BOOKS,
+  async (post, { dispatch }) => {
+    const response = await fetch(url);
+    const data = await response.json();
+    const books = Object.keys(data).map((id) => ({
+      ...data[id][0],
+      item_id: id,
+    }));
+    dispatch({
+      type: GET_BOOKS,
+      payload: books,
+    });
   },
-});
+);
 
-const removeBook = (index) => ({
-  type: REMOVE,
-  payload: index,
-});
+const addBook = createAsyncThunk(
+  ADD,
+  async (book, { dispatch }) => {
+    await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(book),
+    });
+    dispatch({
+      type: ADD,
+      payload: book,
+    });
+  },
+);
 
-const bookReducer = (state = initialState, action) => {
+const removeBook = createAsyncThunk(
+  REMOVE,
+  async (id, { dispatch }) => {
+    await fetch(`${url}/${id}`, {
+      method: 'DELETE',
+    });
+    dispatch({
+      type: REMOVE,
+      payload: id,
+    });
+  },
+);
+
+const bookReducer = (state = [], action) => {
   switch (action.type) {
+    case GET_BOOKS:
+      return action.payload;
     case ADD:
       return [...state, action.payload];
     case REMOVE:
-      return [...state.filter((book) => book.id !== action.payload)];
+      return [...state.filter((book) => book.item_id !== action.payload)];
     default:
       return state;
   }
 };
 
-export { addBook, removeBook };
+export { getAllBooks, addBook, removeBook };
 export default bookReducer;
