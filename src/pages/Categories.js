@@ -12,7 +12,7 @@ const Categories = () => {
   };
 
   return (
-    <div>
+    <div className="categories-page">
       <h4>{currentStatus}</h4>
       <button type="button" onClick={showStatus}>Check Status</button>
     </div>
